@@ -21,6 +21,7 @@
 
     <modules>
         <module>printpass-common</module>
+        <module>discovery-server</module>
     </modules>
 
     <properties>
