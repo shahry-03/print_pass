@@ -22,6 +22,7 @@
     <modules>
         <module>printpass-common</module>
         <module>discovery-server</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>
