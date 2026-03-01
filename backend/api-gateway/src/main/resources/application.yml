@@ -8,8 +8,14 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true # Yeh automatically routes bana dega Eureka ki madad se
+          enabled: true
           lower-case-service-id: true
+      # Yahan hum Gateway ko rasta bata rahe hain
+      routes:
+        - id: user-service
+          uri: lb://USER-SERVICE   # 'lb' ka matlab hai Load Balancer (Eureka se address dhoondho)
+          predicates:
+            - Path=/api/users/** # Agar URL mein yeh aaye, toh USER-SERVICE ko bhej do
 
 eureka:
   client:
